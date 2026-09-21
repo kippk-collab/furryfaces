@@ -1,0 +1,190 @@
+/* 
+  -----------------------------------
+  Gallery Magic Style Sheet
+  by Project Seven Development
+  www.projectseven.com
+  Gallery Type: Horizontal
+  Insert-Mode CSS
+  -----------------------------------
+*/
+#p7GS {
+	font-family: Arial, Helvetica, sans-serif;
+}
+#p7GSvpW3 {
+	margin: 0 auto;
+	background-color: #33343E;
+	border: 1px solid #333333;
+}
+#p7GSvp {
+	margin:0 auto;
+	background-color:#33343E;
+	position:relative;
+}
+#p7GSsc {
+	position:relative;
+	margin:0;
+}
+/* ------------ Hide Description --------------------- */
+#p7GSsc div {display: none;}
+
+/* ------------ Thumbnail Lists --------------------- */
+#p7GSsc ul {
+	margin:0;
+	padding:0;
+	position:relative;
+}
+#p7GSsc li{
+	margin:0;
+	padding:0; /* do not use padding or margin on li, use margin and padding on img */
+	list-style-type: none;
+	display:inline;
+}
+#p7GSsc img {
+	padding: 4px;
+	border: 1px solid #333333;
+	background-color: #33343E;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	margin: 1px 1px;
+}
+
+/* ------ Thumbnail Hover and Down Classes ------------------------------- */
+
+#p7GSsc .p7GSover {
+	border-color: #FF9900;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background-color: #FFFFFF;
+}
+#p7GSsc .p7GSon {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background-color: #999999;
+	border-color: #333333;
+}
+
+/* ------------ Thumbnail Nav Styles ------------ */
+#p7GSnv {
+	margin: 0;
+	padding: .25em 0;
+	font-size: 0.75em;
+	background-color: #33343E;
+	border: 1px solid #FFFFFF;
+	color: #999999;
+	text-align: left;
+}
+#p7GSnvtitle {
+	margin: 0 10px 0 0;
+	display: inline !important;
+	color: #FFFFFF;
+}
+#p7GSnv span {
+	display: none;
+}
+#p7GSnv h2 {
+	margin: 0;
+	font-size: 1.5em;
+	color: #FFFFFF;
+	text-transform: capitalize;
+	letter-spacing: normal;
+}
+#p7GSnv a {
+	padding: 0 .5em;
+	color: #333333;
+	font-weight: normal;
+	background-color: #FFFFFF;
+	text-decoration: none;
+	border: 1px solid #333333;
+}
+
+#p7GSnv a:visited {
+	color: #333333;
+	background-color: #FFFFFF;
+}
+#p7GSnv a:hover,
+#p7GSnv a:active,
+#p7GSnv a:focus {
+	border-color: #333333;
+	color: #FFFFFF;
+	background-color: #FF9900;
+}
+
+.p7GSnvon {
+	color: #FFFFFF!important;
+	border-color: #333333!important;
+	background-color:#AEBF3F!important;
+	cursor: default;
+}
+
+/* ------------FULLSIZE IMAGE DIV---------------- */
+/* WRAPPER */
+#p7GSfs {
+	/* border: 1px solid red; */
+	height:490px;
+	margin: 12px 0 12px 0;
+	display: none;
+}
+/* FullSize Row Construct */
+.p7GSfst {
+	width: 1px;
+	margin: 0 auto;
+}
+/* ------------FULLSIZE IMAGE DIV---------------- */
+/*IMAGE ROW*/
+.p7GSfsi {
+	background-color:#33343E;
+	padding: 4px;
+	border: 1px solid #333333;
+}
+/* IMAGE */
+.p7GSfsi img {
+	padding: 0px;
+	border: 1px solid #000000;
+}
+
+
+/* -------------------------- IMAGE CAPTION ---------------- */
+/* CAPTION ROW */
+.p7GSfsc {
+	color: #333333;
+	padding: 3px 0;
+}
+.p7GSfsc p{
+	font-size:0.9em;
+}
+
+/* ------------------------- IMAGE DESCRIPTION ------------- */
+/* DESCRIPTION ROW */
+.p7GSfsd {
+	padding: 0;
+	font-size: .9em;
+}
+.p7GSfsd div {
+	margin: 0px;
+	padding: 6px 0 0 0;
+	color: #333333;
+}
+.p7GSfsd p{
+	margin: 0px;
+}
+
+/* ------------- progess bar div ----------------- */
+#p7GSpb {
+	position:absolute;
+	visibility:hidden;
+}
+/* ------------- placeholder div for loading image ---------- */
+#p7GSah {
+	position:absolute;
+	left:0px;
+	top:0px;
+	visibility:hidden;
+	z-index: 1000;
+}
+
+/*COUNTER*/
+.p7GScounter {
+	letter-spacing: normal;
+	font-weight: normal;
+	text-transform: lowercase;
+}
