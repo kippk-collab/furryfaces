@@ -32,6 +32,7 @@ def nav_links(active):
 
 
 def shell(active, title, description, body, scripts=""):
+    NOINDEX = '<meta name="robots" content="noindex, nofollow">\n' if content.PREVIEW_NOINDEX else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +40,7 @@ def shell(active, title, description, body, scripts=""):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{description}">
-<meta name="author" content="Mary Carol Stunkel">
+{NOINDEX}<meta name="author" content="Mary Carol Stunkel">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -462,6 +463,10 @@ def main():
         "contact.html": contact_page(),
         "pet-of-the-month.html": pet_page(data),
     }
+    if content.PREVIEW_NOINDEX:
+        with open(os.path.join(OUT, "robots.txt"), "w") as fh:
+            fh.write("# Review copy - not for indexing.\nUser-agent: *\nDisallow: /\n")
+
     for name, html in pages.items():
         with open(os.path.join(OUT, name), "w") as fh:
             fh.write(html)

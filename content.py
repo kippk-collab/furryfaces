@@ -5,6 +5,11 @@ here, so the copy only ever has to be edited once. Fragments are plain HTML with
 no styling classes, so either skin can wrap them however it likes.
 """
 
+# These builds are review copies. While this is True every page carries a
+# noindex tag and a disallow-all robots.txt, so Google never files the preview
+# alongside (or instead of) her real site. Flip to False for a real launch.
+PREVIEW_NOINDEX = True
+
 EMAIL = "MaryCarol@furryfaces.net"
 PHONE = "(732) 922-3216"
 PHONE_HREF = "+17329223216"
