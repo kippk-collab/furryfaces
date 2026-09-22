@@ -1,0 +1,3 @@
+# Review copies - not for indexing.
+User-agent: *
+Disallow: /
